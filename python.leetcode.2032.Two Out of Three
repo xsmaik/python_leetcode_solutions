@@ -1,0 +1,15 @@
+class Solution:
+    def twoOutOfThree(self, nums1: List[int], nums2: List[int], nums3: List[int]) -> List[int]:
+        result = []
+
+        for i in nums1:
+            for j in nums2:
+                for k in nums3:
+                    if i == j:
+                        result.append(i)
+                    elif j == k:
+                        result.append(j)
+                    elif k == i:
+                        result.append(k)
+
+        return list(set((result)))
