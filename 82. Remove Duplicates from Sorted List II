@@ -1,0 +1,20 @@
+class Solution:
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        values = []
+        current = head
+        while current:
+            values.append(current.val)
+            current = current.next
+
+        from collections import Counter
+        counter = Counter(values)
+
+        unique_vals = [v for v in values if counter[v] == 1]
+
+        dummy = ListNode(0)
+        curr = dummy
+        for v in unique_vals:
+            curr.next = ListNode(v)
+            curr = curr.next
+
+        return dummy.next
