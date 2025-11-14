@@ -1,0 +1,19 @@
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        sec_nums = []
+
+        while len(nums) != n:
+            rem = nums.pop()
+            sec_nums.append(rem)
+
+        result = sec_nums[::-1]
+
+        res = []
+
+        for i in range(len(nums)):
+            for j in range(len(sec_nums)):
+                res.append(nums[i])
+                res.append(result[i])
+                break
+
+        return res
