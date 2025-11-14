@@ -1,0 +1,13 @@
+class Solution:
+    def alternateDigitSum(self, n: int) -> int:
+        lst = list(str(n))
+        res = []
+
+        for i in range(len(lst)):
+            res.append(int(lst[i]))
+
+        for i in range(len(res)):
+            if i % 2 != 0:
+                res[i] *= -1
+
+        return sum(res)
