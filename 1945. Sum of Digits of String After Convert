@@ -1,0 +1,12 @@
+class Solution:
+    def getLucky(self, s: str, k: int) -> int:
+        alph = 'abcdefghijklmnopqrstuvwxyz'
+        num_str = ""
+        for i in s:
+            index = alph.index(i) + 1
+            num_str += str(index)
+
+        for j in range(k):
+            num_str = str(sum(int(q) for q in num_str))
+
+        return int(num_str)
