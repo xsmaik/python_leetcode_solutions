@@ -1,0 +1,12 @@
+class Solution:
+    def reverseDegree(self, s: str) -> int:
+        alph = 'abcdefghijklmnopqrstuvwxyz'
+        alph = alph[::-1]
+        k = 2
+        num_str = [alph.index(c) + 1 for c in s]
+
+        for i in range(1, len(num_str)):
+            num_str[i] *= k
+            k += 1
+
+        return sum(num_str)
