@@ -7,3 +7,6 @@ class Solution:
                 res.append(i)
                 
         return res
+
+
+/// return [i for i in range(min(nums), max(nums)) if i not in nums]
