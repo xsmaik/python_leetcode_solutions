@@ -1,0 +1,12 @@
+class Solution:
+    def differenceOfSum(self, nums: List[int]) -> int:
+        nums_sec = nums.copy()
+        first = sum(nums)
+
+        for i in range(len(nums_sec)):
+            if nums_sec[i] > 9:
+                nums_sec[i] = sum(int(digit) for digit in str(nums_sec[i]))
+
+        second = sum(nums_sec)
+
+        return abs(first - second)
