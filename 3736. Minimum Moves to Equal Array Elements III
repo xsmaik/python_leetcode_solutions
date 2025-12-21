@@ -1,0 +1,9 @@
+class Solution:
+    def minMoves(self, nums: List[int]) -> int:
+        res = []
+        mm = max(nums)
+
+        for i in range(len(nums)):
+            res.append(mm - nums[i])
+
+        return sum(res)
