@@ -1,0 +1,9 @@
+class Solution:
+    def minimumOperations(self, nums: List[int]) -> int:
+        res = []
+
+        for i in nums:
+            if i != 0 and i not in res:
+                res.append(i)
+
+        return len(res)
