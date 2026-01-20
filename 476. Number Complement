@@ -1,0 +1,12 @@
+class Solution:
+    def findComplement(self, num: int) -> int:
+        bin_num = str(bin(num))[2:]
+        total = ''
+
+        for i in bin_num:
+            if i == '1':
+                total += '0'
+            elif i == '0':
+                total += '1'
+
+        return int(total, 2)
