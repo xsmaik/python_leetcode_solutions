@@ -1,0 +1,13 @@
+class Solution:
+    def nextGreatestLetter(self, letters: List[str], target: str) -> str:
+        n = len(letters)
+
+        let_ord = [ord(i) for i in letters]
+        tg_let = ord(target)
+
+        for i in range(n):
+            if let_ord[i] > tg_let:
+                return letters[i]
+                break
+
+        return letters[0]
