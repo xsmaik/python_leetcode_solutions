@@ -1,0 +1,14 @@
+class Solution:
+    def divideArray(self, nums: List[int]) -> bool:
+        res = [nums.count(i) for i in nums]
+
+        total = True
+
+        for i in range(len(res)):
+            if res[i] % 2 == 0:
+                continue
+            else:
+                total = False
+                break
+
+        return total
