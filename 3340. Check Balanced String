@@ -1,10 +1,5 @@
 class Solution:
     def isBalanced(self, num: str) -> bool:
-        left = 0
-        right = 0
-        num = [int(i) for i in num]
+        digits = list(map(int, num))
 
-        left += sum(num[::2])
-        right += sum(num[1::2])
-
-        return left == right
+        return sum(digits[::2]) == sum(digits[1::2])
