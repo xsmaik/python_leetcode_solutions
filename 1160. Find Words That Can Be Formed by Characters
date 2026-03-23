@@ -1,0 +1,19 @@
+class Solution:
+    def countCharacters(self, words: List[str], chars: str) -> int:
+        total = 0
+
+        for word in words:
+            temp = list(chars)
+            res = 0
+
+            for c in word:
+                if c in temp:
+                    temp.remove(c)
+                    res += 1
+                else:
+                    break
+
+            if res == len(word):
+                total += res
+
+        return total
