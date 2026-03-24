@@ -1,0 +1,7 @@
+class Solution:
+    def maximizeExpressionOfThree(self, nums: List[int]) -> int:
+        nums.sort()
+        first_max = nums[-1]
+        second_max = nums[-2]
+
+        return first_max + second_max - min(nums)
