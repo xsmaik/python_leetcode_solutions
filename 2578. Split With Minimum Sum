@@ -1,0 +1,14 @@
+class Solution:
+    def splitNum(self, num: int) -> int:
+        arr = sorted(list(str(num)))
+
+        num1 = ''
+        num2 = ''
+
+        for i in range(len(arr)):
+            if i % 2 == 0:
+                num2 += arr[i]
+            else:
+                num1 += arr[i]
+
+        return int(num1) + int(num2)
