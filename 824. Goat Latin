@@ -9,11 +9,11 @@ class Solution:
             if word.lower().startswith(('a', 'e', 'i', 'o', 'u')):
                 word += char
                 res.append(word)
-                char += 'a'
             else:
                 word = word[1:] + word[0] + char
                 res.append(word)
-                char += 'a'
+
+            char += 'a'
 
         return ' '.join(res)
                 
