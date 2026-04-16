@@ -1,0 +1,12 @@
+class Solution:
+    def closestTarget(self, words: List[str], target: str, startIndex: int) -> int:
+        n = len(words)
+        res = float('inf')
+
+        for i in range(n):
+            if words[i] == target:
+                right = (i - startIndex + n) % n
+                left = (startIndex - i + n) % n
+                res = min(res, right, left)
+
+        return -1 if res == float('inf') else res
