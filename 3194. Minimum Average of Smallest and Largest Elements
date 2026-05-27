@@ -1,0 +1,15 @@
+class Solution:
+    def minimumAverage(self, nums: List[int]) -> float:
+        nums.sort()
+
+        average = []
+        n = len(nums) // 2
+
+        for i in range(n):
+            maxEl = nums.pop()     
+            minEl = nums.pop(0)     
+
+            res = (minEl + maxEl) / 2
+            average.append(res)
+
+        return min(average)
