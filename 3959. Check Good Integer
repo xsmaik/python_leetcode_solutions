@@ -1,0 +1,6 @@
+class Solution:
+    def checkGoodInteger(self, n: int) -> bool:
+        nn = [int(i) for i in str(n)]
+        nnn = [i*i for i in nn] 
+
+        return sum(nnn) - sum(nn) >= 50
