@@ -1,0 +1,13 @@
+class Solution:
+    def sumAndMultiply(self, n: int) -> int:
+        if n == 0:
+            return 0
+
+        nums = [int(i) for i in str(n) if i != '0']
+        total = sum(nums)
+        n = ''
+
+        for i in nums:
+            n += str(i)
+
+        return total * int(n)
