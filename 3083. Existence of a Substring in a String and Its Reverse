@@ -1,0 +1,11 @@
+class Solution:
+    def isSubstringPresent(self, s: str) -> bool:
+        revers = s[::-1]
+        ss = list(s)
+
+        for i in range(len(s) - 1):
+            curr = s[i] + s[i + 1]
+            if curr in revers:
+                return True
+        
+        return False
